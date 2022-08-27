@@ -1,0 +1,9 @@
+.app-board {
+  button {
+    @apply text-sm px-4 py-2 w-24 min-w-max m-2 rounded-md hover:bg-opacity-50 active:bg-opacity-100;
+    // light
+    @apply bg-green-400 bg-opacity-30;
+    // dark
+    @apply dark:bg-blue-400 dark:bg-opacity-30;
+  }
+}

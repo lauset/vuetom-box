@@ -1,0 +1,15 @@
+.app-menu {
+  .menu-box {
+    .menu {
+      @apply mx-3 mb-3 px-4 py-2 rounded-md cursor-pointer transition-colors duration-300;
+      &:hover {
+        color: var(--vt-c-brand);
+        background-color: var(--vt-c-bg-soft);
+      }
+      &.active {
+        color: var(--vt-c-brand);
+        background-color: var(--vt-c-bg-mute); 
+      }
+    }
+  }
+}

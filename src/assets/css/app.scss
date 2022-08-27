@@ -1,0 +1,40 @@
+@import "./vars.scss";
+
+@media (prefers-color-scheme: dark) {
+}
+
+:root {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: 0.75s;
+}
+
+.logo.tauri:hover {
+  filter: drop-shadow(0 0 2em #24c8db);
+}
+
+html {
+  color: var(--vt-c-text-1);
+  background-color: var(--vt-c-bg);
+
+  a {
+    font-weight: 500;
+    &:hover {
+      color: var(--vt-c-brand-highlight);
+    }
+  }
+}
+

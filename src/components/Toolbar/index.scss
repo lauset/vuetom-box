@@ -1,0 +1,14 @@
+.app-toolbar {
+  @apply h-8 flex fixed top-0 left-0 right-0 justify-end;
+  user-select: none;
+  .titlebar-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    &:hover {
+      background-color: var(--vt-c-bg-mute);
+    }
+  }
+}
