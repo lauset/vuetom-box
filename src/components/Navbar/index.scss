@@ -1,0 +1,6 @@
+.app-navbar {
+  @apply h-8 w-full px-10 mt-8 absolute;
+  .navbar-box {
+    @apply flex justify-between;
+  }
+}

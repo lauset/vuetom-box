@@ -1,4 +1,9 @@
 .app-right-view {
+  backdrop-filter: blur(3px);
+  flex-basis: 100%;
+  flex: 4;
+  background-color: var(--vt-c-backdrop-bg-right);
+  @apply shadow-md shadow-gray-500 dark:shadow-sm;
   @apply p-4 border-2 border-gray-100 border-opacity-5 h-full rounded-md;
   @apply hover:border-opacity-10;
 }

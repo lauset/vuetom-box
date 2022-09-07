@@ -1,0 +1,159 @@
+@import './colors.scss';
+
+$color-theme: #4daf7c;
+// $color-theme-bgimg: none;
+// $color-theme-bgposition: center;
+// $color-theme-bgsize: cover;
+// $color-theme-hover: lighten($color-theme, 10%);
+// $color-theme-active: darken($color-theme, 20%);
+// $color-theme-font: #fff;
+// $color-theme-font-label: lighten($color-theme, 35%);
+
+// $color-reply-floor: $color-theme;
+// $color-theme-sidebar: $color-theme;
+// $color-btn: lighten($color-theme, 5%);
+// $color-btn-background: lighten($color-theme, 35%);
+// $color-btn-hover: lighten($color-theme, 5%);
+// $color-btn-active: darken($color-theme, 5%);
+// $color-btn-select: lighten($color-theme, 5%);
+
+// $color-pagination-background: lighten($color-theme, 45%);
+// $color-pagination-hover: lighten($color-theme, 10%);
+// $color-pagination-active: darken($color-theme, 10%);
+// $color-pagination-select: lighten($color-theme, 10%);
+
+// $color-scrollbar-track: lighten($color-theme, 10%);
+// $color-scrollbar-thumb: lighten($color-theme, 10%);
+// $color-scrollbar-thumb-hover: lighten($color-theme, 10%);
+
+// $color-tab-btn-background: lighten($color-theme, 10%);
+// $color-tab-btn-background-hover: lighten($color-theme, 10%);
+// $color-tab-border-top: lighten($color-theme, 5%);
+// $color-tab-border-bottom: lighten($color-theme, 5%);
+
+$color-hideBtn: #3bc2b2;
+$color-minBtn: #fdbc40;
+$color-maxBtn: #35cd4b;
+$color-closeBtn: #fc625d;
+$color-hideBtn-hover: rgba($color-hideBtn, 0.8);
+$color-minBtn-hover: rgba($color-minBtn, 0.8);
+$color-maxBtn-hover: rgba($color-maxBtn, 0.8);
+$color-closeBtn-hover: rgba($color-closeBtn, 0.8);
+
+$color-white-theme: #fff;
+$color-black-theme: #272727;
+$color-naruto-theme: #5790a7;
+$color-wind-theme: #4daf7c;
+
+$color-white-theme-font: #000;
+$color-black-theme-font: #fafafa; 
+$color-naruto-theme-font: darken($color-naruto-theme, 10%);
+$color-wind-theme-font: darken($color-wind-theme, 10%);
+
+$width-app-left: 6.6%;
+$height-toolbar: 50px;
+$height-player: 60px;
+$shadow-app: 4px;
+$radius-progress-border: 5px;
+$radius-border: 8px;
+$transition-theme: 0.4s ease;
+$form-radius: 3px;
+
+// themes
+$themes: 'white', 'black', 'naruto', 'wind', 'nocolor';
+$themes-color: (
+  'white': $color-white-theme,
+  'black': $color-black-theme,
+  'naruto': $color-naruto-theme,
+  'wind': $color-wind-theme,
+);
+$themes-bgimage: (
+  'white': 'none',
+  'black': none,
+  'naruto': url('@/assets/imgs/myzcbg.jpg'),
+  'wind': url('@/assets/imgs/qfl.jpg'),
+  'nocolor': none,
+);
+$themes-color-100: (
+  'white': $grey-100,
+  'black': $white,
+  'naruto': $light-blue-100,
+  'wind': $green-100,
+  'nocolor': $grey-100, 
+);
+$themes-color-200: (
+  'white': $grey-200,
+  'black': $white,
+  'naruto': $light-blue-200,
+  'wind': $green-200,
+  'nocolor': $grey-200,
+);
+$themes-color-300: (
+  'white': $grey-300,
+  'black': $white,
+  'naruto': $light-blue-300,
+  'wind': $green-300,
+  'nocolor': $grey-300,
+);
+$themes-color-400: (
+  'white': $grey-400,
+  'black': $white,
+  'naruto': $light-blue-400,
+  'wind': $green-400,
+  'nocolor': $grey-400,
+);
+$themes-color-500: (
+  'white': $grey-500,
+  'black': $white,
+  'naruto': $light-blue-500,
+  'wind': $green-500,
+  'nocolor': $grey-500,
+);
+$themes-color-600: (
+  'white': $grey-600,
+  'black': $white,
+  'naruto': $light-blue-600,
+  'wind': $green-600,
+  'nocolor': $grey-600,
+);
+$themes-color-700: (
+  'white': $grey-700,
+  'black': $white,
+  'naruto': $light-blue-700,
+  'wind': $light-green-700,
+  'nocolor': $grey-700,
+);
+
+// function
+@function get-colors($social-colors, $color) {
+  @if not map-has-key($social-colors, $color) {
+    @warn "No color found for `#{$color}` in map. Property omitted.";
+  }
+  @return map-get($social-colors, $color);
+}
+// mixin
+@mixin mixin-ellipsis-1() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@mixin mixin-ellipsis() {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+@mixin mixin-ellipsis-2() {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

@@ -1,10 +1,18 @@
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+import VPSwitchAppearance from '../Switch/VPSwitchAppearance.vue'
+import router from '@/routes'
+import './index.scss'
 
 export default {
   setup() {
     onMounted(() => {})
     return () => (
-      <div class='app-navbar h-8 w-full px-10 mt-8 absolute'>Navbar</div>
+      <div class='app-navbar'>
+        <div class='navbar-box'>
+          <div>Vuetom Box</div>
+          <VPSwitchAppearance />
+        </div>
+      </div>
     )
   },
 }

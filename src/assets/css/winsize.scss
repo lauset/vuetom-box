@@ -1,0 +1,61 @@
+$winsizes: 
+  'winsize-0', 
+  'winsize-1', 
+  'winsize-2', 
+  'winsize-3', 
+  'winsize-4',
+  'winsize-5';
+
+$win-0-size-width: 828px;
+$win-0-size-height: 530px;
+
+$win-1-size-width: 1024px;
+$win-1-size-height: 768px;
+
+$win-2-size-width: 1280px;
+$win-2-size-height: 1024px;
+
+$win-3-size-width: 1280px;
+$win-3-size-height: 720px;
+
+$win-4-size-width: 1400px;
+$win-4-size-height: 900px;
+
+$win-5-size-width: 1920px;
+$win-5-size-height: 1080px;
+
+$winsizes-width: (
+  'winsize-0': $win-0-size-width,
+  'winsize-1': $win-1-size-width,
+  'winsize-2': $win-2-size-width,
+  'winsize-3': $win-3-size-width,
+  'winsize-4': $win-4-size-width,
+  'winsize-5': $win-5-size-width
+);
+
+$winsizes-height: (
+  'winsize-0': $win-0-size-height,
+  'winsize-1': $win-1-size-height,
+  'winsize-2': $win-2-size-height,
+  'winsize-3': $win-3-size-height,
+  'winsize-4': $win-4-size-height,
+  'winsize-5': $win-5-size-height
+);
+
+$winsizes-font-size: (
+  'winsize-0': 10px,
+  'winsize-1': 12px,
+  'winsize-2': 16px,
+  'winsize-3': 16px,
+  'winsize-4': 18px,
+  'winsize-5': 22px,
+);
+
+$winsizes-bar-height: (
+  'winsize-0': 35px,
+  'winsize-1': 40px,
+  'winsize-2': 45px,
+  'winsize-3': 50px,
+  'winsize-4': 55px,
+  'winsize-5': 60px,
+);

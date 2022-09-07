@@ -2,8 +2,8 @@ export const lang = {
   welcome: '欢迎进入本框架',
   lang: {
     en: 'English',
-    'zh-CN': '中文简体',
-    'zh-HK': '中文繁体',
+    'zh_CN': '简体中文',
+    'zh_HK': '繁体中文',
   },
   about: {
     system: '关于系统',

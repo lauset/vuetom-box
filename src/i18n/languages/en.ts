@@ -2,8 +2,8 @@ export const lang = {
   welcome: 'Welcome to Vuetom Box',
   lang: {
     'en': 'English',
-    'zh-CN': '中文简体',
-    'zh-HK': '中文繁体',
+    'zh_CN': '简中',
+    'zh_HK': '繁中',
   },
   about: {
     system: 'About System',

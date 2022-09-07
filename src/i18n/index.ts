@@ -11,7 +11,7 @@ export function loadLanguages() {
   for (const key of langs) {
     if (key === './index.ts') return
     const lang = context[key].lang
-    const name = key.replace(/(\.\/languages\/|\.ts)/g, '')
+    const name = key.replace(/(\.\/languages\/|\.ts)/g, '').replace('-', '_')
     languages[name] = lang
   }
 

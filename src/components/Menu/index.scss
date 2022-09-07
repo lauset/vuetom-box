@@ -1,4 +1,9 @@
 .app-menu {
+  height: 100%;
+  background-color: var(--vt-c-backdrop-bg-left);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  @apply p-3 pt-6 shadow-md shadow-gray-500 dark:shadow-sm;
   .menu-box {
     .menu {
       @apply mx-3 mb-3 px-4 py-2 rounded-md cursor-pointer transition-colors duration-300;
@@ -7,7 +12,7 @@
         background-color: var(--vt-c-bg-soft);
       }
       &.active {
-        color: var(--vt-c-brand);
+        // color: var(--vt-c-brand);
         background-color: var(--vt-c-bg-mute); 
       }
     }

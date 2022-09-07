@@ -1,0 +1,82 @@
+//globl transition css
+
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+/*scale*/
+.scale-enter-from,
+.scale-leave-to {
+  transform: scale(0);
+}
+
+.scale-leave-from,
+.scale-enter-to {
+  transform: scale(1);
+}
+
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.2s;
+}
+
+/*slide-fade*/
+.slide-fade-enter-active {
+  transition: all 0.5s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.1s;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+/*bounce*/
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*breadcrumb*/
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all 0.5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all 0.5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
