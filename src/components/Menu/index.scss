@@ -1,20 +1,27 @@
-.app-menu {
-  height: 100%;
-  background-color: var(--vt-c-backdrop-bg-left);
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-  @apply p-3 pt-6 shadow-md shadow-gray-500 dark:shadow-sm;
-  .menu-box {
-    .menu {
-      @apply mx-3 mb-3 px-4 py-2 rounded-md cursor-pointer transition-colors duration-300;
-      &:hover {
-        color: var(--vt-c-brand);
-        background-color: var(--vt-c-bg-soft);
-      }
-      &.active {
-        // color: var(--vt-c-brand);
-        background-color: var(--vt-c-bg-mute); 
-      }
+.menu {
+  @apply mx-3 my-1 p-2 px-4 rounded-xl cursor-pointer transition-colors duration-300;
+  @apply border-2 border-white border-opacity-0;
+  @apply hover:border-opacity-100;
+  @apply flex justify-between items-center;
+  &:hover {
+    // background-color: var(--vt-c-bg-soft);
+    border-color: var(--vt-c-brand);
+  }
+  &.active {
+    background-color: var(--vt-c-bg-mute); 
+  }
+  .menu-left {
+    @apply flex justify-start items-center flex-grow;
+    .menu-icon {
+      @apply scale-150;
     }
+    .menu-text {
+      @apply mx-4 w-1/2;
+      @apply hover:animate-wiggle;
+    }
+  }
+  .menu-right {
+    @apply flex-grow-0;
+    fill: var(--vt-c-text-2);
   }
 }

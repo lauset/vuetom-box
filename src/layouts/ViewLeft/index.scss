@@ -1,0 +1,9 @@
+.home-view-left {
+  @apply h-full;
+  .view-left {
+    @apply h-full;
+    .view-default {
+      @apply pt-16 h-screen overflow-scroll;
+    }
+  }
+}

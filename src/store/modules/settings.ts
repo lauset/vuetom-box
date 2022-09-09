@@ -11,7 +11,7 @@ import useStoreSettingList from './settingList'
 import type { SettingStateType } from 'EVT'
 
 const defaultSettings: SettingStateType = {
-  themeId: 2,
+  themeId: 1,
   windowSizeId: 0,
   darkMode: 'auto',
   isShowLogo: false,

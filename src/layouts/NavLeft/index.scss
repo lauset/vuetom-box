@@ -1,0 +1,6 @@
+.nav-left {
+  background-color: var(--vt-c-bg-soft);
+  @apply font-extrabold text-2xl shadow-sm;
+  @apply absolute w-full h-16 z-10 p-3 border-b-2 border-gray-500 border-opacity-10;
+  @apply dark:border-gray-100 dark:border-opacity-10;
+}

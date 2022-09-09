@@ -60,68 +60,71 @@ $transition-theme: 0.4s ease;
 $form-radius: 3px;
 
 // themes
-$themes: 'white', 'black', 'naruto', 'wind', 'nocolor';
+$themes: 'normal', 'naruto', 'wind', 'nocolor';
 $themes-color: (
-  'white': $color-white-theme,
-  'black': $color-black-theme,
+  'normal': $color-white-theme,
   'naruto': $color-naruto-theme,
   'wind': $color-wind-theme,
 );
 $themes-bgimage: (
-  'white': 'none',
-  'black': none,
-  'naruto': url('@/assets/imgs/myzcbg.jpg'),
-  'wind': url('@/assets/imgs/qfl.jpg'),
+  'normal': 'none',
+  'naruto': url('@/assets/imgs/naruto.jpg'),
+  'wind': url('@/assets/imgs/wind.jpg'),
   'nocolor': none,
 );
 $themes-color-100: (
-  'white': $grey-100,
-  'black': $white,
+  'normal': $grey-100,
   'naruto': $light-blue-100,
   'wind': $green-100,
   'nocolor': $grey-100, 
 );
 $themes-color-200: (
-  'white': $grey-200,
-  'black': $white,
+  'normal': $grey-200,
   'naruto': $light-blue-200,
   'wind': $green-200,
   'nocolor': $grey-200,
 );
 $themes-color-300: (
-  'white': $grey-300,
-  'black': $white,
+  'normal': $grey-300,
   'naruto': $light-blue-300,
   'wind': $green-300,
   'nocolor': $grey-300,
 );
 $themes-color-400: (
-  'white': $grey-400,
-  'black': $white,
+  'normal': $grey-400,
   'naruto': $light-blue-400,
   'wind': $green-400,
   'nocolor': $grey-400,
 );
 $themes-color-500: (
-  'white': $grey-500,
-  'black': $white,
+  'normal': $grey-500,
   'naruto': $light-blue-500,
   'wind': $green-500,
   'nocolor': $grey-500,
 );
 $themes-color-600: (
-  'white': $grey-600,
-  'black': $white,
+  'normal': $grey-600,
   'naruto': $light-blue-600,
   'wind': $green-600,
   'nocolor': $grey-600,
 );
 $themes-color-700: (
-  'white': $grey-700,
-  'black': $white,
+  'normal': $grey-700,
   'naruto': $light-blue-700,
-  'wind': $light-green-700,
+  'wind': $green-700,
   'nocolor': $grey-700,
+);
+$themes-color-800: (
+  'normal': $grey-800,
+  'naruto': $light-blue-800,
+  'wind': $green-800,
+  'nocolor': $grey-800,
+);
+$themes-color-900: (
+  'normal': $grey-900,
+  'naruto': $light-blue-900,
+  'wind': $green-900,
+  'nocolor': $grey-900,
 );
 
 // function

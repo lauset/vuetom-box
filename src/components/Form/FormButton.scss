@@ -1,0 +1,30 @@
+.form-button {
+  @apply inline-block m-2 min-w-max;
+  .button-box {
+    @apply px-2 py-1 rounded-xl border-2;
+    @apply hover:cursor-pointer transition-colors duration-300;
+    @apply flex justify-start items-center;
+    .button-icon {}
+    .button-text {
+      @apply text-sm mx-2 text-center w-full;
+    }
+    &.light {
+      border-color: var(--vt-c-bg-mute);
+      background-color: var(--vt-c-bg-mute);
+      &:hover {
+        border-color: var(--vt-c-brand);
+        background-color: var(--vt-c-bg-soft);
+      }
+    }
+    &.dark {
+      color: var(--vt-c-text-1);
+      border-color: var(--vt-c-text-4);
+      background-color: var(--vt-c-bg-soft);
+      &:hover {
+        border-color: var(--vt-c-text-3);
+        background-color: var(--vt-c-bg-mute);
+      }
+    }
+  }
+  
+}

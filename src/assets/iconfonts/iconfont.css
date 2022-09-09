@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1662700075597') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-biji:before {
+  content: "\e62b";
+}
+
+.icon-biaoqian:before {
+  content: "\e62c";
+}
+
+.icon-tiaojie:before {
+  content: "\e62d";
+}
+
+.icon-dianzan:before {
+  content: "\e62e";
+}
+
+.icon-fenxiang:before {
+  content: "\e62f";
+}
+
+.icon-heian:before {
+  content: "\e630";
+}
+
+.icon-chaping:before {
+  content: "\e631";
+}
+
+.icon-fanhui:before {
+  content: "\e632";
+}
+
+.icon-dingdan:before {
+  content: "\e633";
+  color: #3cff00;
+}
+
+.icon-huaban:before {
+  content: "\e634";
+}
+
+.icon-huangguan:before {
+  content: "\e635";
+}
+
+.icon-jiazai:before {
+  content: "\e636";
+}
+
+.icon-biaozhang:before {
+  content: "\e637";
+}
+
+.icon-jiesuo:before {
+  content: "\e638";
+}
+
+.icon-leida:before {
+  content: "\e639";
+}
+
+.icon-mima:before {
+  content: "\e63a";
+}
+
+.icon-renwuguanli:before {
+  content: "\e63b";
+}
+
+.icon-jiangbei:before {
+  content: "\e63c";
+}
+
+.icon-jiangpai:before {
+  content: "\e63d";
+}
+
+.icon-shoucang:before {
+  content: "\e63e";
+}
+
+.icon-shouqi:before {
+  content: "\e63f";
+}
+
+.icon-shounahe:before {
+  content: "\e640";
+}
+
+.icon-shaixuan:before {
+  content: "\e641";
+}
+
+.icon-re:before {
+  content: "\e642";
+}
+
+.icon-xiayibu:before {
+  content: "\e643";
+}
+
+.icon-shezhi:before {
+  content: "\e644";
+  color: orange;
+}
+
+.icon-shouye:before {
+  content: "\e645";
+  color: #24bdff;
+}
+
+.icon-xingxing:before {
+  content: "\e646";
+}
+
+.icon-xiugai:before {
+  content: "\e647";
+}
+
+.icon-shanchu:before {
+  content: "\e648";
+}
+
+.icon-shu:before {
+  content: "\e649";
+}
+
+.icon-liangse:before {
+  content: "\e64a";
+}
+
+.icon-rili:before {
+  content: "\e64b";
+}
+
+.icon-tongzhi:before {
+  content: "\e64c";
+}
+
+.icon-taiyang:before {
+  content: "\e64d";
+}
+
+.icon-a-xiugai2:before {
+  content: "\e64e";
+}
+
+.icon-zhankai:before {
+  content: "\e64f";
+}
+
+.icon-xunzhang:before {
+  content: "\e650";
+}
+
+.icon-pingfen:before {
+  content: "\e651";
+}
+

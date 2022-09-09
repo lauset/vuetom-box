@@ -1,0 +1,12 @@
+.home-view-right {
+  @apply grid grid-cols-10 gap-0 h-full;
+  .view-left {
+    @apply md:col-span-3 h-full relative;
+  }
+  .view-right {
+    @apply md:col-span-7 h-full relative;
+  }
+  .view-default {
+    @apply pt-16 h-screen overflow-scroll;
+  }
+}

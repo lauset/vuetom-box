@@ -52,27 +52,22 @@ export default {
   themeList: [
     {
       id: 0,
-      name: '大白',
-      class: 'white'
+      name: '普通',
+      class: 'normal'
     },
     {
       id: 1,
-      name: '小黑',
-      class: 'black'
-    },
-    {
-      id: 2,
       name: '木叶村',
       class: 'naruto'
     },
     {
-      id: 3,
+      id: 2,
       name: '起风了',
       class: 'wind'
     },
     {
-      id: 4,
-      name: '一览无余',
+      id: 3,
+      name: '敬请期待',
       class: 'nocolor'
     },
   ],

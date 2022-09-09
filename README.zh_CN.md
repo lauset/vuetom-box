@@ -2,7 +2,11 @@
 
 Rust + Vue3 + Vite + Ts + Tailwind
 
-## Project
+App volume after packaging: 11911299 bytes (**11.9 MB**)
+
+App directory after packaging: `src-tauri/target/release/bundle`
+
+## 项目
 
 tauri:
 
@@ -16,15 +20,15 @@ tauri:
     - mod.rs
     - system.rs
 
-### Languages
+### 多语言
 
-en, zh, zhHK
+可从托盘或页面设置中切换语言 en, zh, zhHK
 
-### Themes
+### 主题
 
-three themes (normal, naruto, wind)
+三种主题与主题亮暗模式适配 (normal, naruto, wind)
 
-### Dark Mode
+### 暗黑模式
 
 tailwind: `dark: 'class'`
 
@@ -59,25 +63,25 @@ scss var
 // }
 ```
 
-## Commands
+## 操作
 
-**npm scripts**
+**npm 脚本**
 
 ```sh
-# Install Deps
+# 安装依赖
 pnpm install
 
-# Browse in browser
+# 浏览器中打开
 pnpm dev
 
-# Browse in OS
+# 操作系统预览
 pnpm tauri:dev
 
-# Build App
+# 打包应用
 pnpm tauri:build
 ```
 
-**rust cargo**
+**cargo 脚本**
 
 ```sh
 cd src-tauri/
@@ -89,19 +93,19 @@ cargo fmt
 
 ## Rust
 
-waiting...
+总结中...
 
-## Features
+## 功能
 
-- [x] Responsive Menu
-- [x] DarkMode & Theme
-- [x] Languages switching
-- [x] Simple Events
-- [ ] Built in Server
-- [ ] Dialogs
-- [ ] Dynamic effect
+- [x] 响应式菜单
+- [x] 主题与亮暗模式
+- [x] 多语言
+- [x] 简单事件交互
+- [ ] 内置服务器
+- [ ] 弹框组件
+- [ ] 更多动效
 
-## First edition Preview
+## 初版预览
 
 ![view1](./resource/view1.png)
 
@@ -113,7 +117,7 @@ waiting...
 
 ![tray2](./resource/tray2.png)
 
-## Useful
+## 链接
 
 [Tauri](https://tauri.app/v1/guides/getting-started/setup)
 

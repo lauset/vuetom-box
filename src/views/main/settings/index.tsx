@@ -1,9 +1,8 @@
 import { computed, watch } from 'vue'
 import useStoreSetting from '@/store/modules/settings'
 import useStoreSettingList from '@/store/modules/settingList'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 import { t } from '@/i18n'
+import './index.scss'
 
 export default {
   setup() {
@@ -20,6 +19,10 @@ export default {
       settingStore.THEME_ID(val)
     }
 
+    const getAssetsFile = (url: string) => {
+      return new URL(`../../../assets/imgs/${url}.jpg`, import.meta.url).href
+    }
+
     watch(
       currentSetting,
       e => {
@@ -32,22 +35,35 @@ export default {
       <div class='view-settings'>
         <div ref='dom_setting' class='setting'>
           <dl ref='dom_setting_list'>
-            <dt id='basic'>基本设置</dt>
+            <dt id='basic'>主题设置</dt>
             <dd>
-              <h3 id='basic_theme'>主题</h3>
+              <h3 id='basic_theme'>当前: {theme.value}</h3>
               <div>
                 <ul class='theme'>
                   {themes.value.map(t => {
                     return (
-                      <li onClick={() => handleThemeChange(t.id)}>
-                        <span class={[t.class]}></span>
+                      <li
+                        onClick={() => handleThemeChange(t.id)}
+                        class={[
+                          { active: theme.value === t.class },
+                          'theme-li',
+                        ]}
+                      >
+                        <span class={[t.class, 'w-20 h-20']}>
+                          <img
+                            alt={t.class}
+                            class='w-18 h-12 rounded-lg opacity-80'
+                            src={getAssetsFile(t.class)}
+                          />
+                        </span>
                         <label
                           class={[
                             t.class + '-label',
                             theme == t.class ? 'active' : '',
+                            'inline-block w-20 text-center p-1',
                           ]}
                         >
-                          {t.class}
+                          {t.name}
                         </label>
                       </li>
                     )

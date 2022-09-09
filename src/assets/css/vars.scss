@@ -1,5 +1,6 @@
 @import './theme.scss';
 
+// 颜色定义
 :root {
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f9f9f9;
@@ -63,10 +64,14 @@
   --vt-c-purple-darker: #602960;
 }
 
+// 亮
 :root {
   --vt-c-bg: var(--vt-c-white);
   --vt-c-bg-soft: var(--vt-c-white-soft);
   --vt-c-bg-mute: var(--vt-c-white-mute);
+  // --vt-c-brand: var(--vt-c-green);
+  // --vt-c-brand-light: var(--vt-c-green-light);
+  // --vt-c-brand-dark: var(--vt-c-green-dark);
   --vt-c-divider: var(--vt-c-divider-light-1);
   --vt-c-divider-light: var(--vt-c-divider-light-2);
   --vt-c-divider-inverse: var(--vt-c-divider-dark-1);
@@ -80,32 +85,38 @@
   --vt-c-text-inverse-2: var(--vt-c-text-dark-2);
   --vt-c-text-inverse-3: var(--vt-c-text-dark-3);
   --vt-c-text-inverse-4: var(--vt-c-text-dark-4);
-  --vt-c-brand: var(--vt-c-green);
-  --vt-c-brand-light: var(--vt-c-green-light);
-  --vt-c-brand-dark: var(--vt-c-green-dark);
   --vt-c-brand-highlight: var(--vt-c-brand-dark);
-  --vt-c-backdrop-bg-left: rgba(255, 255, 255, .3);
-  --vt-c-backdrop-bg-right: rgba(255, 255, 255, .6);
+  --vt-c-bg-front: rgba(255, 255, 255, .3);
+  --vt-c-bg-back: rgba(255, 255, 255, .6);
   --screen-linear-top: -webkit-linear-gradient(
     top,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 100%
   );
   --screen-linear-left: -webkit-linear-gradient(
     left,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(255, 255, 255, .6) 0%,
+    rgba(255, 255, 255, .1) 30%,
+    rgba(255, 255, 255, 0) 100%
   );
   --screen-bg-url: none;
   @each $t in $themes {
     .#{$t} {
-      --vt-c-brand:#{map-get($themes-color-500, $t)}; 
-      --vt-c-bg-mute: #{map-get($themes-color-100, $t)}; 
+      --vt-c-brand: #{map-get($themes-color-800, $t)}; 
+      --vt-c-brand-light: #{map-get($themes-color-700, $t)}; 
+      --vt-c-brand-dark: #{map-get($themes-color-900, $t)}; 
+      --vt-c-bg-soft: #{rgba(lighten(map-get($themes-color-700, $t), 80%), 50%)}; 
+      --vt-c-bg-mute: #{rgba(map-get($themes-color-700, $t), 30%)}; 
       --screen-bg-url: #{map-get($themes-bgimage, $t)};
+    }
+    .normal {
+      --vt-c-bg-front: #fff; 
+      --vt-c-bg-back: #efeff3; 
     }
   }
 }
 
+// 暗
 .dark {
   --vt-c-bg: var(--vt-c-black);
   --vt-c-bg-soft: var(--vt-c-black-soft);
@@ -124,23 +135,30 @@
   --vt-c-text-inverse-3: var(--vt-c-text-light-3);
   --vt-c-text-inverse-4: var(--vt-c-text-light-4);
   --vt-c-brand-highlight: var(--vt-c-brand-light);
-  --vt-c-backdrop-bg-left: rgba(0, 0, 0, .5);
-  --vt-c-backdrop-bg-right: rgba(0, 0, 0, .5);
+  --vt-c-bg-front: rgba(0, 0, 0, .5);
+  --vt-c-bg-back: rgba(0, 0, 0, .5);
   --screen-linear-top: -webkit-linear-gradient(
     top,
-    rgba(0, 0, 0, .3) 0%,
-    rgba(0, 0, 0, .3) 100%
+    rgba(0, 0, 0, .5) 0%,
+    rgba(0, 0, 0, .5) 100%
   );
   --screen-linear-left: -webkit-linear-gradient(
     left,
-    rgba(0, 0, 0, .3) 0%,
+    rgba(0, 0, 0, .6) 0%,
     rgba(0, 0, 0, .3) 100%
   );
   @each $t in $themes {
     .#{$t} {
-      --vt-c-brand:#{map-get($themes-color-500, $t)}; 
-      --vt-c-bg-mute: #{rgba(map-get($themes-color-700, $t), 30%)}; 
+      --vt-c-brand: #{map-get($themes-color-200, $t)}; 
+      --vt-c-brand-light: #{map-get($themes-color-100, $t)}; 
+      --vt-c-brand-dark: #{map-get($themes-color-300, $t)}; 
+      --vt-c-bg-soft: #{rgba(darken(map-get($themes-color-700, $t), 35%), 50%)}; 
+      --vt-c-bg-mute: #{rgba(map-get($themes-color-700, $t), 30%)};
       --screen-bg-url: #{map-get($themes-bgimage, $t)};
+    }
+    .normal {
+      --vt-c-bg-front: #18222d; 
+      --vt-c-bg-back: #213040;  
     }
   }
 }

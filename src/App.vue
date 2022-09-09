@@ -42,9 +42,9 @@ onUnmounted(() => {
 
 <template>
   <div id="app-root" :class="[themeClass, winSizeClass]">
-    <Toolbar />
-    <Navbar />
-    <div class="h-screen pt-16">
+    <!-- <Toolbar />
+    <Navbar /> -->
+    <div class="h-screen">
       <router-view v-slot="{ Component, route }: any">
         <transition :name="route.meta?.transition || 'fade'" appear>
           <keep-alive v-if="route.meta?.keepAlive">
@@ -69,9 +69,13 @@ onUnmounted(() => {
 #app-root {
   @each $t in $themes {
     &.#{$t} {
-      color: darken(map-get($themes-color-700, $t), 10%);
-      background-image: var(--screen-linear-top), var(--screen-linear-left), var(--screen-bg-url);
-      background-color: map-get($themes-color, $t);
+      color: map-get($themes-color-900, $t);
+      background-image: var(--screen-linear-top), var(--screen-linear-left),
+        var(--screen-bg-url);
+      background-color: var(--vt-c-bg-back);
+    }
+    &.normal {
+      background-image: none;
     }
   }
 }
@@ -81,11 +85,14 @@ onUnmounted(() => {
     @each $t in $themes {
       &.#{$t} {
         color: map-get($themes-color-100, $t);
-        background-image: var(--screen-linear-top), var(--screen-linear-left), var(--screen-bg-url);
-        background-color: map-get($themes-color, $t);
+        background-image: var(--screen-linear-top), var(--screen-linear-left),
+          var(--screen-bg-url);
+        background-color: var(--vt-c-bg-back);
       }
-    } 
+      &.normal {
+        background-image: none;
+      }
+    }
   }
 }
-
 </style>

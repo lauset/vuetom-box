@@ -1,0 +1,19 @@
+.nav-right {
+  background-color: var(--vt-c-bg-soft);
+  @apply shadow-sm w-full h-16 z-10 p-3;
+  @apply absolute border-b-2 border-gray-500 border-opacity-10;
+  @apply dark:border-gray-100 dark:border-opacity-10;
+  .nav-right-box {
+    @apply flex justify-between items-center;
+    .nav-back {
+      @apply flex justify-start items-center cursor-pointer;
+      @apply hover:scale-125 hover:ml-2 transition-all duration-500;
+      .nav-back-icon {
+        @apply scale-150;
+      }
+      .nav-back-text {
+        @apply mx-2 font-black text-orange-400 dark:text-orange-300;
+      }
+    }
+  }
+}

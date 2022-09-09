@@ -13,30 +13,32 @@ const menuRoutes: any = [
   {
     path: '/board',
     name: 'Board',
-    component: () => import('@/views/main/Board'),
+    components: {
+      default: () => import('@/views/main/board'),
+    },
     meta: {
       text: 'menus.board',
-      icon: 'Document',
+      icon: 'MenuIconBoard',
       isHide: false,
     },
   },
   {
     path: '/info',
     name: 'System Info',
-    component: () => import('@/views/main/Info'),
+    component: () => import('@/views/main/info'),
     meta: {
       text: 'menus.info',
-      icon: 'Finished',
+      icon: 'MenuIconList',
       isHide: false,
     },
   },
   {
     path: '/settings',
     name: 'Settings',
-    component: () => import('@/views/main/Settings'),
+    component: () => import('@/views/main/settings'),
     meta: {
       text: 'menus.settings',
-      icon: 'Setting',
+      icon: 'MenuIconSettings',
       isHide: false,
     },
   },
@@ -47,6 +49,18 @@ const menuRoutes: any = [
     component: undefined,
     meta: {
       text: 'menus.page404',
+      icon: 'Pouring',
+      isHide: true,
+    },
+  },
+  {
+    path: '/menu',
+    name: 'Menu',
+    components: {
+      left: () => import('@/layouts/MenuLeft'),
+    },
+    meta: {
+      text: 'menus.menu',
       icon: 'Pouring',
       isHide: true,
     },
@@ -64,7 +78,7 @@ const routes: Array<RouteRecordRaw> | any = [
     path: '/',
     name: 'Home',
     redirect: '/board',
-    component: () => import('@/components/Home'),
+    component: () => import('@/layouts/Home'),
     meta: {},
     children: menuRoutes,
   },
