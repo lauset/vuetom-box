@@ -33,7 +33,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "cn.vuetom",
+      "identifier": "top.vuetom",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -65,7 +65,7 @@
         "title": "Vuetom Box",
         "width": 800,
         "transparent": true,
-        "decorations": false
+        "decorations": true
       }
     ]
   }

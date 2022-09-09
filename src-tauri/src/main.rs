@@ -1,11 +1,13 @@
 #![cfg_attr(
     all(not(debug_assertions), target_os = "macos"),
-    windows_subsystem = "macos"
+    windows_subsystem = "windows"
 )]
 
 mod events;
 mod menu;
+mod tray;
 mod winv;
+mod lang;
 
 fn main() {
     let context = tauri::generate_context!();
@@ -13,8 +15,8 @@ fn main() {
         // .setup(winv::init)
         .menu(menu::init(&context))
         .on_menu_event(menu::handler)
-        .system_tray(menu::tray_init(&context))
-        .on_system_tray_event(menu::tray_handler)
+        .system_tray(tray::init(&context))
+        .on_system_tray_event(tray::handler)
         .invoke_handler(tauri::generate_handler![
             events::system::cmd1,
             events::system::cmd2
@@ -22,3 +24,7 @@ fn main() {
         .run(context)
         .expect("error while running tauri application");
 }
+
+// fn main() {
+//     lang::test();
+// }
