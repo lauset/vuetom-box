@@ -20,7 +20,11 @@ export default {
     }
 
     const getAssetsFile = (url: string) => {
-      return new URL(`../../../assets/imgs/${url}.jpg`, import.meta.url).href
+      const u = new URL(`../../../assets/imgs/${url}.jpg`, import.meta.url).href
+      if (u.endsWith('/undefined')) {
+        return undefined
+      }
+      return u
     }
 
     watch(
@@ -50,16 +54,20 @@ export default {
                         ]}
                       >
                         <span class={[t.class, 'w-20 h-20']}>
-                          <img
-                            alt={t.class}
-                            class='w-18 h-12 rounded-lg opacity-80'
-                            src={getAssetsFile(t.class)}
-                          />
+                          {getAssetsFile(t.class) ? (
+                            <img
+                              alt={t.class}
+                              class='w-18 h-12 rounded-lg opacity-80'
+                              src={getAssetsFile(t.class)}
+                            />
+                          ) : (
+                            <div class='w-18 h-12 rounded-lg opacity-30 bg-gray-800' />
+                          )}
                         </span>
                         <label
                           class={[
-                            t.class + '-label',
-                            theme == t.class ? 'active' : '',
+                            `${t.class}-label`,
+                            theme.value == t.class ? 'active' : '',
                             'inline-block w-20 text-center p-1',
                           ]}
                         >

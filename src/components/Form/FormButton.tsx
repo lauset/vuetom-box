@@ -1,12 +1,3 @@
-import {
-  defineComponent,
-  ref,
-  reactive,
-  markRaw,
-  defineAsyncComponent,
-  h,
-  resolveComponent,
-} from 'vue'
 import './FormButton.scss'
 
 interface Props {

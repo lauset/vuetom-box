@@ -1,4 +1,20 @@
 .app-board {
+  .settings-list {
+    &>dt {
+      @apply text-2xl font-black border-l-4 rounded-sm mx-6 my-3 px-3;
+      color: var(--vt-c-brand);
+      border-color: var(--vt-c-brand-dark)
+    }
+    &>dd {
+      color: var(--vt-c-text-1);
+      &>h3 {
+        @apply px-10;
+      }
+      &>div {
+        @apply px-8 py-2;
+      }
+    }
+  }
   button {
     @apply text-sm px-4 py-2 w-24 min-w-max m-2 rounded-md hover:bg-opacity-50 active:bg-opacity-100;
     // light

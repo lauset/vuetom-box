@@ -1,4 +1,13 @@
 .view-settings {
+  .settings-list {
+    .basic-title {
+      @apply text-2xl font-black border-l-4 rounded-sm mx-6 my-3 px-3;
+      border-color: var(--vt-c-brand-dark)
+    }
+    .basic-text {
+      @apply px-10;
+    }
+  }
   .theme-li {
     @apply inline-block w-28 rounded-2xl px-4 pt-4 m-2;
     @apply border-2 border-gray-50 border-opacity-10 hover:border-opacity-30;
