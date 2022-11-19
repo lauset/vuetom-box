@@ -1,22 +1,32 @@
+// scrollbar
 .scroll {
-  overflow-y: scroll;
+  overflow: scroll;
   &::-webkit-scrollbar {
     width: 6px;
+  }
+  &::-webkit-scrollbar:horizontal {
     height: 6px;
-    background-color: rgba(0, 0, 0, 0);
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
   }
   &::-webkit-scrollbar-track {
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: transparent;
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: rgba(126, 248, 208, 0.5);
     transition: all 0.4s ease;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    border-radius: 5px;
-    background-color: rgba(0, 145, 65, 0.5);
-    transition: all 0.4s ease;
+    &:hover {
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: rgba(0, 145, 65, 0.5);
+      transition: all 0.4s ease;
+    }
   }
 }
+
+// * {
+//   scrollbar-color: var(--el-scrollbar-bg-color) var(--el-bg-color);
+// }

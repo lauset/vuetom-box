@@ -14,7 +14,7 @@ export default {
     }
     return () => (
       <div class='app-menu'>
-        <div class='menu-box'>
+        <div class='menu-box scroll'>
           {menuRoutes.map((m, idx) => {
             return (
               <div onClick={() => to(m.path)}>

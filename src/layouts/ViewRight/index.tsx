@@ -1,9 +1,9 @@
 import { ref, Transition, KeepAlive } from 'vue'
 import { RouterView } from 'vue-router'
-import MenuLeft from '@/layouts/MenuLeft'
 import NavLeft from '../NavLeft'
 import NavRight from '../NavRight'
 import Welcome from '../Welcome'
+import MenuLeft from '@/layouts/MenuLeft'
 import './index.scss'
 
 const DefaultWelcome = {
@@ -22,13 +22,13 @@ export default {
       <div class='home-view-right'>
         <div class='view-left'>
           <NavLeft />
-          <div class='view-default'>
+          <div class='view-default scroll'>
             <MenuLeft />
           </div>
         </div>
         <div class='view-right'>
           <NavRight mode='right' back={backShow.value} />
-          <div class='view-default'>
+          <div class='view-default scroll'>
             <RouterView>
               {({ Component, route }) => {
                 changeBack(!Component)

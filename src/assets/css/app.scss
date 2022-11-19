@@ -32,7 +32,9 @@
 
 html {
   color: var(--vt-c-text-1);
-  background-color: var(--vt-c-bg);
+  background-color: var(--vt-c-transparent);
+  // background-color: var(--vt-c-bg);
+  
 
   a {
     font-weight: 500;

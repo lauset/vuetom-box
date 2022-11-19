@@ -2,6 +2,7 @@
 
 // 颜色定义
 :root {
+  --vt-c-transparent: transparent;
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f9f9f9;
   --vt-c-white-mute: #f1f1f1;
@@ -67,8 +68,10 @@
 // 亮
 :root {
   --vt-c-bg: var(--vt-c-white);
-  --vt-c-bg-soft: var(--vt-c-white-soft);
-  --vt-c-bg-mute: var(--vt-c-white-mute);
+  --vt-c-bg-s: var(--vt-c-white-soft);
+  --vt-c-bg-m: var(--vt-c-white-mute);
+  --vt-c-bg-soft: var(--vt-c-white-soft); // theme will rewrite
+  --vt-c-bg-mute: var(--vt-c-white-mute); // theme will rewrite
   // --vt-c-brand: var(--vt-c-green);
   // --vt-c-brand-light: var(--vt-c-green-light);
   // --vt-c-brand-dark: var(--vt-c-green-dark);
@@ -113,14 +116,19 @@
       --vt-c-bg-front: #fff; 
       --vt-c-bg-back: #efeff3; 
     }
+    .nocolor {
+      --vt-c-bg-back: var(--vt-c-transparent)
+    }
   }
 }
 
 // 暗
 .dark {
   --vt-c-bg: var(--vt-c-black);
-  --vt-c-bg-soft: var(--vt-c-black-soft);
-  --vt-c-bg-mute: var(--vt-c-black-mute);
+  --vt-c-bg-s: var(--vt-c-black-soft);
+  --vt-c-bg-m: var(--vt-c-black-mute);
+  --vt-c-bg-soft: var(--vt-c-black-soft); // theme will rewrite
+  --vt-c-bg-mute: var(--vt-c-black-mute); // theme will rewrite
   --vt-c-divider: var(--vt-c-divider-dark-1);
   --vt-c-divider-light: var(--vt-c-divider-dark-2);
   --vt-c-divider-inverse: var(--vt-c-divider-light-1);
@@ -159,6 +167,9 @@
     .normal {
       --vt-c-bg-front: #18222d; 
       --vt-c-bg-back: #213040;  
+    }
+    .nocolor {
+      --vt-c-bg-back: var(--vt-c-transparent);   
     }
   }
 }

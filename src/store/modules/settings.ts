@@ -1,4 +1,7 @@
 import { defineStore } from 'pinia'
+import store from '../index'
+import useStoreSettingList from './settingList'
+import type { SettingStateType } from 'EVT'
 import {
   SETTING_KEY,
   THEME_ID,
@@ -6,9 +9,6 @@ import {
   LANG_ID,
   APPEARANCE_KEY,
 } from '@/common/enum'
-import store from '../index'
-import useStoreSettingList from './settingList'
-import type { SettingStateType } from 'EVT'
 
 const defaultSettings: SettingStateType = {
   themeId: 1,

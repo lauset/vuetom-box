@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, computed } from 'vue'
 import { invoke } from '@tauri-apps/api/tauri'
 import { listen } from '@tauri-apps/api/event'
-import Toolbar from '@/components/Toolbar'
-import Navbar from '@/components/Navbar'
+// import Toolbar from '@/components/Toolbar'
+// import Navbar from '@/components/Navbar'
 import { setLanguage } from '@/i18n'
 import useStoreSetting from '@/store/modules/settings'
 
@@ -33,7 +32,9 @@ const listenLanguage = async () => {
 
 listenLanguage()
 
-onMounted(() => {})
+onMounted(() => {
+  console.log(22)
+})
 
 onUnmounted(() => {
   unlisten()
@@ -69,7 +70,8 @@ onUnmounted(() => {
 #app-root {
   @each $t in $themes {
     &.#{$t} {
-      color: map-get($themes-color-900, $t);
+      // color: map-get($themes-color-800, $t);
+      color: var(--vt-c-text-1);
       background-image: var(--screen-linear-top), var(--screen-linear-left),
         var(--screen-bg-url);
       background-color: var(--vt-c-bg-back);
@@ -84,7 +86,8 @@ onUnmounted(() => {
   #app-root {
     @each $t in $themes {
       &.#{$t} {
-        color: map-get($themes-color-100, $t);
+        // color: map-get($themes-color-300, $t);
+        color: var(--vt-c-text-1);
         background-image: var(--screen-linear-top), var(--screen-linear-left),
           var(--screen-bg-url);
         background-color: var(--vt-c-bg-back);
