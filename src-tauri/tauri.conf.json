@@ -7,7 +7,7 @@
   },
   "package": {
     "productName": "Vuetom Box",
-    "version": "0.0.1"
+    "version": "0.0.2"
   },
   "tauri": {
     "systemTray": {
@@ -16,7 +16,13 @@
     },
     "macOSPrivateApi": true,
     "allowlist": {
-      "all": true
+      "all": true,
+      "notification": {
+        "all": true
+      },
+      "os": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,
