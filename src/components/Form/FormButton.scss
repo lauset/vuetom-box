@@ -1,7 +1,7 @@
 .form-button {
   @apply inline-block m-2 min-w-max;
   .button-box {
-    @apply px-2 py-1 rounded-xl border-2;
+    @apply py-1 rounded-xl border-2;
     @apply hover:cursor-pointer transition-colors duration-300;
     @apply flex justify-start items-center;
     .button-icon {}

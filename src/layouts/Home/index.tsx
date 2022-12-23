@@ -8,9 +8,6 @@ export default {
     const mdAndLarger = breakpoints.greaterOrEqual('md')
     return () => (
       <div class='app-home h-full'>
-        {/* <div class='home-box-1 h-full sm:block md:hidden'>
-          <ViewLeft />
-        </div> */}
         {mdAndLarger.value ? (
           <div class='home-box-1 h-full hidden'></div>
         ) : (
@@ -18,10 +15,6 @@ export default {
             <ViewLeft />
           </div>
         )}
-        {/* <div class='home-box-2 h-full sm:hidden md:block hidden'>
-          {mdAndLarger.value}
-          <ViewRight />
-        </div> */}
         {mdAndLarger.value ? (
           <div class='home-box-2 h-full block'>
             <ViewRight />

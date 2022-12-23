@@ -1,4 +1,3 @@
-import { computed, watch } from 'vue'
 import useStoreSetting from '@/store/modules/settings'
 import useStoreSettingList from '@/store/modules/settingList'
 import { t } from '@/i18n'
